@@ -1276,7 +1276,7 @@ input, select, textarea {
 		}
 
 			#header .logo .icon:before {
-				font-size: 2rem;
+				font-size: 1.75rem;
 			}
 
 		#header .content {
@@ -1679,4 +1679,19 @@ path {
 }
 path:hover {
   fill: #2ca02c;
+}
+
+/*#header .icons{transition: 2000ms linear;}*/
+
+#header .wind{
+	display: inline-block;
+	border-radius: 10%;
+	border: solid 1px #ffffff;
+	width: 4.5rem;
+	text-align: center;
+	margin: 0 5px 0 5px;
+}
+
+#header .wind:hover {
+	background-color: rgba(255, 255, 255, 0.075);
 }
