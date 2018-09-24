@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang='ja'>
+<head>
+	<meta charset='UTF-8' name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+	<style>html,body,#map{width:100%;margin:0; padding:0;}</style>
+
+	<script type="text/javascript" charset="utf-8" src="https://map.yahooapis.jp/js/V1/jsapi?appid=dj00aiZpPW9mYVQ2UEZrd2J3NiZzPWNvbnN1bWVyc2VjcmV0Jng9YTM-"></script>
+
+	<script type="text/javascript">
+		var ymap;
+    		function ini() {
+    			ymap = new Y.Map("map", {
+    			configure : {
+        			doubleClickZoom : true,
+        			scrollWheelZoom : true,
+        			weatherOverlay: true
+    			}
+			});
+    			//天気レイヤ作成
+    			var weather = new Y.WeatherMapLayer({
+       				 "opacity": 0.6,
+   				 });
+    
+    			//天気レイヤを重ねる地図レイヤを作成
+    			var maplayer = new Y.NormalLayer();
+    			//地図 + 天気レイヤを追加
+    			ymap.addLayerSet("weather", new Y.LayerSet("地図+天気", [maplayer, weather]));
+    			ymap.addControl(new Y.SliderZoomControlVertical());
+    			//地図を描画
+    			ymap.drawMap(new Y.LatLng(35.665627,139.730738), 6, "weather");
+    			//天気データを更新
+    			weather.UpdateWeather();
+			}
+
+	</script>
+
+
+
+<title>雨雲レーダー</title></head>
+
+<body onLoad='ini()'>
+<div id='map' style="width: 100%; height: 500px"></div>
+
+<!-- Begin Yahoo! JAPAN Web Services Attribution Snippet -->
+<a href="https://developer.yahoo.co.jp/about">
+<img src="../images/ybutton.gif" width="105" height="17" title="Webサービス by Yahoo! JAPAN" alt="Webサービス by Yahoo! JAPAN" border="0" style="margin:15px 15px 15px 15px"></a>
+<!-- End Yahoo! JAPAN Web Services Attribution Snippet -->
+
+
+</body>
+</html>
