@@ -1667,4 +1667,16 @@ h2.major::after {
   background: rgba(210, 210, 210, .5);
 }
 
+@media (max-width: 767px) { #ymap{width: 525px !important;} }
 @media (max-width: 480px) { #ymap{width: 303px !important;} }
+
+path {
+  fill: #5fd35f;
+  stroke: #165016;
+  stroke-width: 1;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+path:hover {
+  fill: #2ca02c;
+}
