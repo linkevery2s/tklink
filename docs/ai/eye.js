@@ -42,14 +42,14 @@ function discovery(x){
 	if(x == "1"){
 	eyeui.message.bot({
 		delay: 1000,
-      	content: "ここから調べられます。<br><br><a href='https://linkevery2s.github.io/bseyes/hinan.html' target='_blank'>避難マップ</a>"
+      	content: "ここから調べられます。<br><br><a href='../index.html#rmap' target='_blank'>避難マップ</a>"
 	});
     }else if(x == "2"){
 		eyeui.message.bot({
 	  	delay: 1000,
       	content: "雨雲レーダーを表示します。"
     }).then(function() {
-		setTimeout(function(){ location.href="https://linkevery2s.github.io/bseyes/ame.html#map"; }, 1000);
+		setTimeout(function(){ location.href="../index.html#cloud_r"; }, 1000);
 	});
     }else if(x == "3"){
 		eyeui.message.bot({
