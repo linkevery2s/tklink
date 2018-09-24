@@ -1667,4 +1667,4 @@ h2.major::after {
   background: rgba(210, 210, 210, .5);
 }
 
-@media (max-width: 767px) { #ymap{width: 303px !important;} }
+@media (max-width: 480px) { #ymap{width: 303px !important;} }
