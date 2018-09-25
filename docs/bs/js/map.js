@@ -1,12 +1,12 @@
-//version 5.
+
 var map;var p;var zoom;var marker; var markers = []; var gps_button; var hinanj;var marker1;
 var todou ;var ido; var keido;
 
 	function start(){
 		map = L.map('map');
-		L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png', {
-  		attribution: '&copy; <a href="http://maps.gsi.go.jp/development/ichiran.html" target="_blank">地理院タイル</a>'
-  		}).addTo(map);
+		L.tileLayer ('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="http://osm.org/copyright" target="_blank">OpenStreetMap</a> contributors'
+	}).addTo(map);
 		gps_button = L.easyButton('fa-location-arrow', function(){ GPS();}).addTo( map );
 		todou = L.geoJson(k, {style: sty,onEachFeature: geo_k, pointToLayer: iro});
 		map.addLayer(todou);
