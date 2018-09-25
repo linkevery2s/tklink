@@ -17,6 +17,7 @@
 	<script type="text/javascript">
 		var ymap;
     		function ini() {
+
     			ymap = new Y.Map("ymap", {
     			configure : {
         			doubleClickZoom : true,
@@ -24,6 +25,7 @@
         			weatherOverlay: true
     			}
 			});
+	
     			//天気レイヤ作成
     			var weather = new Y.WeatherMapLayer({
        				 "opacity": 0.6,
@@ -33,11 +35,13 @@
     			var maplayer = new Y.NormalLayer();
     			//地図 + 天気レイヤを追加
     			ymap.addLayerSet("weather", new Y.LayerSet("地図+天気", [maplayer, weather]));
+
     			ymap.addControl(new Y.SliderZoomControlVertical());
     			//地図を描画
     			ymap.drawMap(new Y.LatLng(35.665627,139.730738), 6, "weather");
     			//天気データを更新
     			weather.UpdateWeather();
+
 			}
 
 	</script>

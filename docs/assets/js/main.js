@@ -411,4 +411,5 @@ window.onload = function() {
   for (i = 0; i < paths.length; ++i) {
     paths[i].onclick = rm_display;
   }
+  ini();
 };
