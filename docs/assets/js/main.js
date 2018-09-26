@@ -403,7 +403,9 @@
 
 /*Option*/
 function rm_display(e) {
-document.getElementById("refuge_map").innerHTML = '<iframe width="100%" height="500" scrolling="no" frameborder="no" src="bs/' + e.target.getAttribute('data-name') + '.html"></iframe>';
+
+location.href = "bs/" + e.target.getAttribute('data-name') + ".html";
+
 };
 function hinantizu() {
   paths = window.document.querySelectorAll('path');
