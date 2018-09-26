@@ -1699,3 +1699,129 @@ path:hover {
 #footer{ opacity: 1 !important;}
 
 #ymap a{border-bottom: none !important;}
+
+
+.box1 {
+  position: relative;
+  padding: .3em;
+  background-color: #f0f0f0;
+}
+.box1 span {
+  display: block;
+  padding: .75em 1em;
+  border: 1px dashed #ccc;
+  color: #000;
+}
+.box1::before,
+.box1::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+}
+.box1::before {
+  top: 100%;
+  left: 0;
+  border-width: 0 15px 15px 0;
+  border-right-color: #ccc;
+}
+.box1::after {
+  top: -15px;
+  right: 0;
+  border-style: solid;
+  border-width: 0 15px 15px 0;
+  border-bottom-color: #ccc;
+}
+
+.des1{
+position: relative;
+color: black;
+background: #d0ecff;
+line-height: 1.4;
+padding: 0.25em 0.5em;
+margin: 2em 0 0.5em;
+border-radius: 0 5px 5px 5px;
+}
+
+.des1:after {/*タブ*/
+  position: absolute;
+  font-family: "FontAwesome",'Quicksand','Avenir','Arial',sans-serif;
+  content: '\f00c Check';
+  background: #2196F3;
+  color: #fff;
+  left: 0px;
+  bottom: 100%;
+  border-radius: 5px 5px 0 0;
+  padding: 3px 7px 1px;
+  font-size: 0.7em;
+  line-height: 1;
+  letter-spacing: 0.05em
+}
+
+.des2{
+position: relative;
+border-top: solid 2px #80c8d1;
+border-bottom: solid 2px #80c8d1;
+background: #f4f4f4;
+color: #000;
+line-height: 1.4;
+padding: 0.4em 0.5em;
+margin: 2em 0 0.5em;
+}
+
+.des2:after {
+position: absolute;
+font-family: "FontAwesome",'Quicksand','Avenir','Arial',sans-serif;
+content: '\f0a7\ POINT';
+background: #80c8d1;
+color: #fff;
+left: 0px;
+bottom: 100%;
+border-radius: 5px 5px 0 0;
+padding: 5px 7px 3px;
+font-size: 0.7em;
+line-height: 1;
+letter-spacing: 0.05em;
+}
+
+.des3{
+position: relative;
+padding-left: 35px;
+margin-bottom: 15px;
+}
+.des3:before{
+position: absolute;
+font-family: "FontAwesome";
+content: "\f0eb";
+background: #ffca2c;
+color: white;
+font-weight: normal;
+font-size: 15px;
+border-radius: 50%;
+left: 0;
+width: 25px;
+height: 25px;
+line-height: 25px;
+text-align: center !important;
+top: 50%;
+-moz-transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+.des3:after {
+content: '';
+display: block;
+position: absolute;
+left: 20px;
+height: 0;
+width: 0;
+border-top: 7px solid transparent;
+border-bottom: 7px solid transparent;
+border-left: 12px solid #ffca2c;
+top: 50%;
+-moz-transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+}
