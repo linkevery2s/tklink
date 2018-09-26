@@ -1697,3 +1697,5 @@ path:hover {
 }
 
 #footer{ opacity: 1 !important;}
+
+#ymap a{border-bottom: none !important;}
