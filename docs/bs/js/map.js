@@ -99,11 +99,11 @@ var todou ;var ido; var keido;
     }
 
     if (feature.properties && feature.properties.gake){
-    	popup += '　がけ崩れ、土石流及び地滑り：<span id = "pop_moji">' + feature.properties.gake + '</span>';
+    	popup += '　がけ崩れ、土石流及び地滑り：<span id = "pop_moji">' + feature.properties.gake + '</span><br>';
     }
 
     if (feature.properties && feature.properties.takashio){
-    	popup += '　高潮：<span id = "pop_moji">' + feature.properties.takashio + '</span>';
+    	popup += '高潮：<span id = "pop_moji">' + feature.properties.takashio + '</span>';
     }
 
     if (feature.properties && feature.properties.jishin){
@@ -111,11 +111,11 @@ var todou ;var ido; var keido;
     }
 
     if (feature.properties && feature.properties.tsunami){
-    	popup += '　津波：<span id = "pop_moji">' + feature.properties.tsunami + '</span>';
+    	popup += '　津波：<span id = "pop_moji">' + feature.properties.tsunami + '</span><br>';
     }
 
     if (feature.properties && feature.properties.kaji){
-    	popup += '　大規模な火事：<span id = "pop_moji">' + feature.properties.kaji + '</span>';
+    	popup += '大規模な火事：<span id = "pop_moji">' + feature.properties.kaji + '</span>';
     }
 
     if (feature.properties && feature.properties.naisui){
