@@ -8,6 +8,11 @@ var todou ;var ido; var keido;
 		attribution: '&copy; <a href="http://osm.org/copyright" target="_blank">OpenStreetMap</a> contributors'
 	}).addTo(map);
 		gps_button = L.easyButton('fa-location-arrow', function(){ GPS();}).addTo( map );
+
+var back = L.easyButton('fa-undo', function(){
+    			location.href = "../index.html#rmap";
+			}).addTo( map );
+
 		todou = L.geoJson(k, {style: sty,onEachFeature: geo_k, pointToLayer: iro});
 		map.addLayer(todou);
 
