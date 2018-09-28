@@ -1705,6 +1705,7 @@ path:hover {
   position: relative;
   padding: .3em;
   background-color: #f0f0f0;
+  margin: 20px 0 20px 0;
 }
 .box1 span {
   display: block;
