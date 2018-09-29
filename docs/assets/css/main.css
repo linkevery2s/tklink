@@ -1834,7 +1834,7 @@ transform: translateY(-50%);
 	padding-right: 25px;
 }
 
-#houryu .close {display:none !important;}
+.toj .close {display:none !important;}
 
 .link{
 	display: block;
