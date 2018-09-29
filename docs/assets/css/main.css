@@ -1888,3 +1888,23 @@ transform: translateY(-50%);
 				}
 
 		}
+
+.kmt{
+position: relative;
+display: inline-block;
+padding: 0 55px;
+}
+
+.kmt:before, .kmt:after{
+content: '';
+position: absolute;
+top: 50%;
+display: inline-block;
+width: 45px;
+height: 2px;
+border-top: solid 1px #fff;
+border-bottom: solid 1px #fff;
+}
+
+.kmt:before {left:0;}
+.kmt:after {right: 0;}
