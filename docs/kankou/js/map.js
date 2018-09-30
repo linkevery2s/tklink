@@ -19,21 +19,17 @@ var map;var hash;var shise;
     			location.href = "../index.html#kankou";
 		}).addTo( map );
 		map.setView([35.6958, 139.7852], 12);
-		shise = L.geoJson(shiseki, {style: sty,onEachFeature: geo_k});
+
+		shise = L.geoJson(shiseki, {onEachFeature: geo_k, pointToLayer: iro});
 		map.addLayer(shise);
 	}
 
 	function sty(feature) {return feature.properties && feature.properties.style;}
 
 	function iro(feature, latlng) {
-				return L.circleMarker(latlng, {
-					radius: 10,
-					fillColor: "#2EFE2E",
-					color: "#000",
-					weight: 1,
-					opacity: 1,
-					fillOpacity: 0.8
-				});
+	
+		return L.marker(latlng, {icon: L.AwesomeMarkers.icon({icon: 'flag', prefix: 'fa', markerColor: 'darkblue'}) });
+
 	}
 
 	function geo_k(feature, layer) {
