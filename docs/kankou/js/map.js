@@ -14,12 +14,12 @@ var map;var hash;var shise;
 		map = L.map('map');
 		L.tileLayer ('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="http://osm.org/copyright" target="_blank">OpenStreetMap</a> contributors'}).addTo(map);
-		//hash = new L.Hash(map);
+		hash = new L.Hash(map);
 		var back = L.easyButton('fa-undo', function(){
     			location.href = "../index.html#kankou";
 		}).addTo( map );
-		map.setView([35.595, 139.592], 8);
-		shise = L.geoJson(shiseki, {style: sty,onEachFeature: geo_k, pointToLayer: iro});
+		map.setView([35.6958, 139.7852], 12);
+		shise = L.geoJson(shiseki, {style: sty,onEachFeature: geo_k});
 		map.addLayer(shise);
 	}
 
@@ -44,6 +44,10 @@ var map;var hash;var shise;
     
     if (feature.properties && feature.properties.Jusho){
     	popup += '<br>住所：' + feature.properties.Jusho;
+    }
+
+    if (feature.properties && feature.properties.setumei){
+    	popup += '<br>概要：' + feature.properties.setumei;
     }
 
     layer.bindPopup(popup);
