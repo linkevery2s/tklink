@@ -15,6 +15,9 @@ var map;var hash;var shise;
 		L.tileLayer ('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="http://osm.org/copyright" target="_blank">OpenStreetMap</a> contributors'}).addTo(map);
 		//hash = new L.Hash(map);
+		var back = L.easyButton('fa-undo', function(){
+    			location.href = "../index.html#kankou";
+		}).addTo( map );
 		map.setView([35.595, 139.592], 8);
 		shise = L.geoJson(shiseki, {style: sty,onEachFeature: geo_k, pointToLayer: iro});
 		map.addLayer(shise);
