@@ -49,7 +49,7 @@ function discovery(x){
 	  	delay: 1000,
       	content: "雨雲レーダーを表示します。"
     }).then(function() {
-		setTimeout(function(){ location.href="../index.html#cloud_r"; }, 1000);
+		setTimeout(function(){ location.href="../index.html#rmap"; }, 1000);
 	});
     }else if(x == "3"){
 		eyeui.message.bot({

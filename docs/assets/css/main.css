@@ -1828,10 +1828,7 @@ transform: translateY(-50%);
 }
 
 #se_t{
-	background: url(../../images/t_button.png) 98% 50% no-repeat;
-	background-size: 20px 20px;
-	display: block;
-	padding-right: 25px;
+
 }
 
 .toj .close {display:none !important;}
