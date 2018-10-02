@@ -4,7 +4,7 @@ $(function(){
 	$("table.tbl tbody").html("");
 	
 	//HTMLを生成
-	$.getJSON("../json/data.json", function(data){
+	$.getJSON("json/data.json", function(data){
 		$(data.release).each(function(){
 			$('<tr>'+
 			  '<th>'+this.day+'</th>'+
