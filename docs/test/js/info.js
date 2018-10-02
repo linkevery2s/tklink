@@ -4,7 +4,7 @@ $(function(){
 	$("table.tbl tbody").html("");
 	
 	//HTMLを生成
-	$.getJSON("json/data.json", function(data){
+	$.getJSON("https://linkevery2s.github.io/tklink/test/json/data.json", function(data){
 		$(data.release).each(function(){
 			$('<tr>'+
 			  '<th>'+this.day+'</th>'+
