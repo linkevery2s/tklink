@@ -5,7 +5,7 @@ $(function(){
 	
 	//HTMLを生成
 	$.getJSON("https://linkevery2s.github.io/tklink/test/json/data.json", function(data){
-		$.each(function(){
+		$(data).each(function(){
 			$('<tr>'+
 			  '<th>'+this.day+'</th>'+
 			  '<td class="label"><span class="' + this.label + '">' + this.category + '</span></td>'+
