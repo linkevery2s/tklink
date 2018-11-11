@@ -4,12 +4,12 @@ $(function(){
 	$("table.tbl tbody").html("");
 	
 	//HTMLを生成
-	$.getJSON("https://linkevery2s.github.io/tklink/test/json/data.json", function(data){
+	$.getJSON("https://linkevery2s.github.io/tklink/test/json/tkmetro.json", function(data){
 		$(data.release).each(function(){
 			$('<tr>'+
-			  '<th>'+this.day+'</th>'+
-			  '<td class="label"><span class="' + this.label + '">' + this.category + '</span></td>'+
-			  '<td><a href="' + this.url + '" target="' + this.target + '">' + this.content + '</a></td>'+
+			  '<th>'+this.title+'</th>'+
+			  '<td class="label">' + this.day + '</td>'+
+			
 		'</tr>').appendTo('table.tbl tbody');
 		})
 	})
