@@ -7,7 +7,7 @@ $(function(){
 	$.getJSON("https://linkevery2s.github.io/tklink/test/json/data.json", function(data){
 		$(data.release).each(function(){
 			$('<tr>'+
-			  '<th>'+this.dc:day+'</th>'+
+			  '<th>'+this.day+'</th>'+
 			  '<td class="label"><span class="' + this.label + '">' + this.category + '</span></td>'+
 			  '<td><a href="' + this.url + '" target="' + this.target + '">' + this.content + '</a></td>'+
 		'</tr>').appendTo('table.tbl tbody');
